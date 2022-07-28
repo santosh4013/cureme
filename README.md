@@ -3,25 +3,25 @@
 # Users:
 
 . Login Form <br>
-. Sign up form
-. Booking Form
-. Medical Form
-. Contact Us
-. Update Profile
-. Payment Form
+. Sign up form <br>
+. Booking Form <br>
+. Medical Form <br>
+. Contact Us <br>
+. Update Profile <br>
+. Payment Form <br>
 
 # Doctors:
 
-. Login
-. Signup
-. Request accept Form
+. Login <br>
+. Signup <br>
+. Request accept Form <br>
 
 # Admin
 
-. Login
-. SignUp
+. Login <br>
+. SignUp 
 
 # Technologies:
 
-. Html 5
+. Html 5 <br>
 . Css 3
