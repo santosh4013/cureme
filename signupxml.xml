@@ -1,0 +1,39 @@
+<?xml version = "1.0"?>
+<!DOCTYPE CUREME[
+<!ELEMENT CUREME (CUSTOMER)*>
+<!ELEMENT CUSTOMER (FULLNAME, USERNAME, EMAIL, PASSWORD, CONFIRMPASSWORD, PHONENUMBER)>
+
+
+<!ELEMENT FULLNAME (#PCDATA)>
+<!ELEMENT USERNAME (#PCDATA)>
+<!ELEMENT EMAIL (#PCDATA)>
+<!ELEMENT PASSWORD (#PCDATA)>
+<!ELEMENT CONFIRMPASSWORD (#PCDATA)>
+<!ELEMENT PHONENUMBER (#PCDATA)>
+
+<!ATTLIST CUSTOMER CUSTOMERID ID #REQUIRED>
+]>
+
+<CUREME>
+    <CUSTOMER CUSTOMERID="c1">
+        <FULLNAME>
+            Gudimetla Surya Santosh Reddy
+        </FULLNAME>
+        <USERNAME>
+            san123
+        </USERNAME>
+        <EMAIL>
+            san123@gmail.com
+        </EMAIL>
+        <PASSWORD>
+            jjdnjdi
+        </PASSWORD>
+        <CONFIRMPASSWORD>
+            jjdnjdi
+        </CONFIRMPASSWORD>
+        <PHONENUMBER>
+            9837294833
+        </PHONENUMBER>
+
+    </CUSTOMER>
+</CUREME>

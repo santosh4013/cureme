@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Log-In</title>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+    <div class="box-form">
+        <div class="left">
+            <div class="overlay">
+            <h1>Cure Me.com</h1>
+            
+            
+            </div>
+        </div>
+        
+        
+            <div class="right">
+            <h5>Login</h5>
+            <p>Don't have an account? <a href="signup.html">Creat Your Account</a> it takes less than a minute</p>
+            <form name = "form" onsubmit="valid()">
+                <div class="inputs">
+                    <input type="text" name="uname" placeholder="user name">
+                    <br>
+                    <input type="password" name="pass" placeholder="password">
+                </div>
+                    
+                    <br><br>
+                    
+                <div class="remember-me--forget-password">
+                        <!-- Angular -->
+            
+                
+            
+                    <p>forget password?</p>
+                </div>
+                    
+                    <br>
+                    <button type="submit" value = "Submit" >Login</button>
+            </form>
+            
+        </div>
+        
+    </div>
+    <!-- partial -->
+    <script>
+        function valid(){
+            
+            var un = document.form.uname.value;
+            
+            var pas = document.form.pass.value;
+           
+            if( un== ""){
+                alert("Please enter a valid user name");
+            }
+            else if(pas.length < 8){
+                alert("Please enter a valid password");
+            }
+            
+            
+
+           
+        }
+
+    </script>
+    
+</body>
+
+</html>

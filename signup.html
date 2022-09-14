@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sign-Up</title>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+    <div class="box-form">
+        <div class="left">
+            <div class="overlay">
+            <h1>Cure Me.com </h1>
+            
+            
+            </div>
+        </div>
+        
+            <div class="right" style="width: 470px">
+            
+            <h5>Signup</h5>
+            <form name = "form">
+                <div class="inputs">
+                    <input type="text" name="fname" placeholder="Full Name">
+                    <br>
+                    <input type="text" name="uname" placeholder="User name">
+                    <br>
+                    <input type="email" name="email1" placeholder="Email">
+                    <br>
+                    <input type="password" name="pass" placeholder="Password">
+                    <br>
+                    <input type="password" name="cpass" placeholder="Confirm password">
+                    <br>
+                    <input type="text" name="pnum" placeholder="Phone number">
+                    <br>
+                </div>
+        <br><br>
+    
+                <button type="submit" value = "Submit" onclick="valid()"><a >SignUp</a></button>
+            </form>
+            
+        </div>
+    </div>
+    <!-- partial -->
+
+    <script>
+        function valid(){
+            var fn = document.form.fname.value;
+            var un = document.form.uname.value;
+            var em = document.form.email1.value;
+            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            var pas = document.form.pass.value;
+            var cur = document.form.cpass.value;
+            var pho = document.form.pnum.value;
+
+            if(fn == ""){
+                if (confirm("Please enter a valid name!")) {
+                    document.form.fname.value = fn;
+                    document.form.uname.value = un;
+                } else {
+                    document.form.fname.value = fn;
+                    document.form.uname.value = un;
+                }
+               
+            }
+           
+            else if( un== ""){
+                alert("Please enter a valid user name");
+            }
+            else if(em = "" || em.match(mailformat)){
+                alert("Please enter a valid email address");
+
+            }
+            else if(pas.length < 8){
+                alert("Please enter a valid password");
+            }
+            else if(pas != cur){
+                alert("Please enter the same password again");
+            }
+            else if(pho.length  <10 || pho.length > 10){
+                alert("Please enter a valid phone number");
+            }
+            
+            document.form.fname.value = fn;
+            document.form.uname.value = un;
+            document.form.email1.value = em;
+            document.form.pass.value = pas;
+            document.form.cpass.value = cur;
+            document.form.pnum.value = pho;
+
+           
+        }
+
+    </script>
+    
+</body>
+</html>

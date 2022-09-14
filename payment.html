@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <link rel="stylesheet" href="payment_style.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+
+<body style="background: #6665ee;">
+    <div class="wrapper">
+        <h2>Payment Form &nbsp   &nbsp &nbsp &nbsp  &nbsp <i class="fa fa-cc-visa" style="color: blue;"> </i> <i class="fa fa-cc-mastercard" style="color: red;"></i> <i class="fa fa-credit-card" style="color: greenyellow;"></i></h2>
+        <form action="payment.php" method="POST" autocomplete="">
+            <!--Account Information Start-->
+            <h4>Account</h4>
+            <div class="input_group">
+
+
+                <div class="input_box">
+                    <input type="text" placeholder="Full Name" required class="name" minlength="3" maxlength="20" id="input-field" onkeydown="return /[a-z]/i.test(event.key)">
+                    <i class="fa fa-user icon"></i>
+                </div>
+                <div class="input_box">
+                    <input type="text" placeholder="Name on Card" required class="name" minlength="3" maxlength="20" id="cardna" name="cardna" onkeydown="return /[a-z]/i.test(event.key)">
+                    <i class="fa fa-user icon"></i>
+                </div>
+            </div>
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="email" placeholder="Email Address" required class="name" >
+                    <i class="fa fa-envelope icon"></i>
+                </div>
+            </div>
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="text" placeholder="Address" required class="name">
+                    <i class="fa fa-map-marker icon" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="text" placeholder="City" required class="name" onkeydown="return /[a-z]/i.test(event.key)">
+                    <i class="fa fa-institution icon"></i>
+                </div>
+            </div>
+            <!--Account Information End-->
+
+
+            <!--DOB & Gender Start-->
+            
+            <!--DOB & Gender End-->
+            <div class="container" >
+                
+                <ul class="nav nav-tabs" style="width: 420px;">
+                  <li><a data-toggle="tab" id="cres-tab">Credit Card</a></li>
+                  <li><a data-toggle="tab" id="wal-tab">Wallet</a></li> 
+
+                  
+                </ul>
+            
+            
+            <div id="home" style="margin: auto;width: 100%;">
+                <div class="tab-pane fade in active" class="ho1">
+                  <h3>Credit Card</h3>
+                  <div class="input_group">
+                    <div class="input_box" style="width: 420px;">
+                        <input type="text" class="name" pattern="[0-9]+" minlength="16" maxlength="16" name="cardno" id="cardno" placeholder="Card Number 1111-2222-3333-4444"  required>
+                        <i class="fa fa-credit-card icon"></i>
+                    </div>
+                </div>
+                <div class="input_group">
+                    <div class="input_box" style="width: 420px;">
+                        <input type="password" class="name" pattern="[0-9]{3}" minlength="3" maxlength="3" placeholder="Card CVC 632" id="cvc" required>
+                        <i class="fa fa-user icon"></i>
+                    </div>
+                </div>
+                <div class="input_group" >
+                    <div class="input_box" style="width: 210px;">
+                        <div class="input_box" style="width: 200px;">
+                            <input type="tel" placeholder="Exp Month" pattern="[0-1]{1}[0-9]{1}" id="exmon" name="exmon" required class="name">
+                            <i class="fa fa-calendar icon" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="input_box" style="width: 200px;">
+                        <input type="tel" placeholder="Exp Year" pattern="[0-2]{1}[0]{1}[0-2]{1}[0-9]" id="exyear" name="exyear" required class="name">
+                        <i class="fa fa-calendar-o icon" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="input_box" style="width: 420px;">
+                    <h3><span>&nbsp &nbsp &nbsp &nbsp &nbsp Amount -   ₹ </span></h3>
+                    <i class="fa fa-money icon" aria-hidden="true"></i>
+                </div>
+                <!--Payment Details End-->
+    
+                <div class="input_group">
+                    <div class="input_box" style="width: 420px;">
+                        <button class="form-control-button" type="submit"  name="cardpayment" value="payment1" >PAY NOW</button>
+                    </div>
+                    
+                </div></div></div>
+
+            <div id="wallet" style="margin: auto;width: 100%;" hidden>
+                <div class="tab-pane fade in active" class="wa1" >
+                  <h3>Wallet</h3>
+                  
+                
+                <div class="input_group" >
+                    <div class="input_box" style="width: 210px;">
+                        
+                    </div>
+                    
+                </div>
+                <div class="input_box" style="width: 420px;">
+                    <h3><span>&nbsp &nbsp &nbsp &nbsp &nbsp Amount -   ₹ </span> </h3>
+                    <i class="fa fa-money icon" aria-hidden="true"></i>
+                </div>
+                <!--Payment Details End-->
+    
+                <div class="input_group">
+                    <div class="input_box" style="width: 420px;">
+                        <button class="form-control-button" type="submit"  name="walpayment" value="payment2"  onclick="vlio()">PAY NOW</button>
+                    </div>
+                    
+                
+                </div></div>
+            </div>
+
+               
+                  <!--Payment Details End-->
+      
+                  
+              
+            
+
+           </div>
+        
+        </form>
+        
+  
+    </div>
+
+    <script lang="javascript">
+        function namevalidate() {
+  var element = document.getElementById('input-field');
+
+  element.value = element.value.replace(/[^a-zA-Z0-9@]+/, '');
+};
+
+
+ var cardcon = document.querySelector('#home')
+ var waletcon = document.querySelector('#wallet')
+ document.querySelector('#wal-tab').addEventListener('click',function(){
+     cardcon.style.display = "none";
+     waletcon.style.display = "block";
+ });
+
+
+ document.querySelector('#cres-tab').addEventListener('click',function(){
+     cardcon.style.display = "block";
+     waletcon.style.display = "none";
+ });
+
+ function vlio() {
+  var element1 = document.getElementById('cardno');
+  element1.value = '0000000000000000';
+  var element2 = document.getElementById('cvc');
+  element2.value  = '000'
+  var element3 = document.getElementById('exmon');
+  element3.value = '00'
+  var element4 = document.getElementById('exyear');
+  element4.value = '0000'
+
+
+};
+    </script>
+    
+   
+
+</body>
+
+</html>

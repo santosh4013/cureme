@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            form
+        </title>
+    </head>
+    <body>
+        <form name = "form" onsubmit="valid()">
+            <p>name </p><input name = "name1" type="text"><br>
+            <p>email </p><input name = "email1" type="email"><br>
+            <p>password </p><input type="password" name="pass"><br>
+            <button type="submit" value = "Submit" style="height: 20px; ">submit</button>
+        </form>
+        
+    </body>
+
+    <script>
+        function valid(){
+            var val = document.form.name1.value;
+            var em = document.form.email1.value;
+            
+            
+            var pas = document.form.pass.value;
+
+            if(val == ""){
+                alert("Please enter a valid name");
+            }
+           
+            else if( em== ""){
+                alert("Please enter a valid email address");
+            }
+            else if(pas.length < 6){
+                alert("Please enter a valid password");
+            }
+            
+           
+        }
+    </script>
+</html>

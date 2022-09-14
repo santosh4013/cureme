@@ -1,0 +1,79 @@
+<?xml version = "1.0"?>
+<!DOCTYPE UpdateProfile [
+<!ELEMENT UpdateProfile (Profile)*>
+<!ELEMENT Profile (FirstName, LastName, Email, UserName, Password,Gender,Age,Phone,Language)>
+<!ELEMENT Language (#PCDATA)>
+<!ELEMENT LastName (#PCDATA)>
+<!ELEMENT FirstName (#PCDATA)>
+<!ELEMENT UserName (#PCDATA)>
+<!ELEMENT Email (#PCDATA)>
+<!ELEMENT Password (#PCDATA)>
+<!ELEMENT Gender (#PCDATA)>
+<!ELEMENT Male (#PCDATA)>
+<!ELEMENT Female (#PCDATA)>
+<!ELEMENT Age (#PCDATA)>
+<!ELEMENT Phone (#PCDATA)>
+
+
+<!ATTLIST Profile id ID #REQUIRED>
+<!ATTLIST UserName updation (yes | no) "yes" >
+<!ATTLIST Gender val (Male | Female) "Male">
+<!ATTLIST Language lang (English|Telugu|Tamil|Malayalam|kanada|Hindi) >
+<!ATTLIST Phone country CDATA #FIXED "+91">
+<!ATTLIST LastName imp CDATA  #IMPLIED>
+
+]>
+
+<UpdateProfile>
+    <Profile id="s1">
+        <FirstName>
+            santosh
+        </FirstName>
+        <LastName imp="yes">
+            reddy
+        </LastName>
+        <Email>
+            suan123@gmail.com
+        </Email>
+        <UserName>
+            san@123
+        </UserName>
+        <Password>
+            123456678
+        </Password>
+        <Gender val="Male">Male</Gender>
+        
+        <Age >15</Age>
+        <Phone country="+91" >9392475566</Phone>
+        <Language lang="Telugu">
+            Telugu
+        </Language>
+
+    </Profile>  
+   
+    <Profile id="s2">
+        <FirstName>
+             ram@123
+        </FirstName>
+        <LastName>
+            reddy
+        </LastName>
+        <Email>
+            ramn123@gmail.com
+        </Email>
+        <UserName>
+            ram@123
+        </UserName>
+        <Password>
+            123456678
+        </Password>
+        <Gender val="Male">Male</Gender>
+        
+        <Age >19</Age>
+        <Phone country="+91" >9392475566</Phone>
+        <Language lang="Telugu">
+            Telugu
+        </Language>
+
+    </Profile>  
+</UpdateProfile>
